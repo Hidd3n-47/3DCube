@@ -1,0 +1,27 @@
+﻿  MeshManager.cpp
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(82,40): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(114,26): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(130,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(131,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(153,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(153,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(152,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(152,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(156,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(156,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(155,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(155,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(159,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(159,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(158,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(158,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(168,25): warning C4244: 'initializing': conversion from 'double' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(171,29): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(171,22): warning C4309: 'initializing': truncation of constant value
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(177,31): warning C4244: '=': conversion from 'const float' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(198,22): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(202,12): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(203,27): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(208,29): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\Programming\3DCube\3DCube\MeshManager.cpp(213,30): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+  3DCube.vcxproj -> C:\Users\chris\Documents\Programming\3DCube\x64\Debug\3DCube.exe
