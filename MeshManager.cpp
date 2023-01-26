@@ -49,21 +49,7 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 
 	// Roation matrices
 	float speed = 0.01f;
-	//mat4x4 matRotZ, matRotX;
 	float theta = 1.0f * speed;
-	/*matRotZ.m[0][0] = cosf(theta);
-	matRotZ.m[0][1] = sinf(theta);
-	matRotZ.m[1][0] = -sinf(theta);
-	matRotZ.m[1][1] = cosf(theta);
-	matRotZ.m[2][2] = 1;
-	matRotZ.m[3][3] = 1;
-
-	matRotX.m[0][0] = 1;
-	matRotX.m[1][1] = cosf(theta * 0.5f);
-	matRotX.m[1][2] = sinf(theta * 0.5f);
-	matRotX.m[2][1] = -sinf(theta * 0.5f);
-	matRotX.m[2][2] = cosf(theta * 0.5f);
-	matRotX.m[3][3] = 1;*/
 
 	std::vector<triangle> trisToRender;
 
@@ -89,8 +75,6 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 			vec3 normal, posVec1, posVec2;
 			posVec1 = triTransform.vertex[1] - triTransform.vertex[0];
 			posVec2 = triTransform.vertex[2] - triTransform.vertex[0];
-			/*posVec1 = triTranslated.vertex[1] - triTranslated.vertex[0];
-			posVec2 = triTranslated.vertex[2] - triTranslated.vertex[0];*/
 
 			normal.x = posVec1.y * posVec2.z - posVec1.z * posVec2.y;
 			normal.y = posVec1.z * posVec2.x - posVec1.x * posVec2.z;
@@ -100,7 +84,6 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 			normal /= l;
 
 			vec3 cameraToTri = triTransform.vertex[0] - pCamera->getPosition();
-			//vec3 cameraToTri = triTranslated.vertex[0] - pCamera->getPosition();
 
 			if (normal * cameraToTri < 0.0f)
 			{
@@ -113,28 +96,22 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 
 				unsigned char colVal = 255 * dotProduct;
 				triTransform.color = Color(colVal, colVal, colVal, 255);
-				//triProjected.color = Color(colVal, colVal, colVal, 255);
 
 				// Project from 3D to 2D.
 				for (int i = 0; i < 3; i++)
 					Math::multiplyMatrixVector(triTransform.vertex[i], matProj);
-				//Math::multiplyMatrixVector(triTranslated.vertex[i], triProjected.vertex[i], matProj);
 
 				// Scale into view;
 				for (int i = 0; i < 3; i++)
 					triTransform.vertex[i] += vec3(1.0f, 1.0f, 0.0f);
-				//triProjected.vertex[i] += vec3(1.0f, 1.0f, 0.0f);
 
 				for (int i = 0; i < 3; i++)
 				{
 					triTransform.vertex[i].x *= 0.5 * (float)pCamera->getWidth();
 					triTransform.vertex[i].y *= 0.5 * (float)pCamera->getHeight();
-					/*triProjected.vertex[i].x *= 0.5 * (float)pCamera->getWidth();
-					triProjected.vertex[i].y *= 0.5 * (float)pCamera->getHeight();*/
 				}
 
 				trisToRender.push_back(triTransform);
-				//trisToRender.push_back(triProjected);
 			}
 	}
 
