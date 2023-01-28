@@ -1,27 +1,3 @@
-﻿  MeshManager.cpp
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(68,40): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(97,26): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(110,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(111,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(130,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(130,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(129,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(129,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(133,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(133,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(132,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(132,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(136,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(136,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(135,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(135,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(145,25): warning C4244: 'initializing': conversion from 'double' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(148,29): warning C4305: 'initializing': truncation from 'int' to 'short'
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(148,22): warning C4309: 'initializing': truncation of constant value
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(154,31): warning C4244: '=': conversion from 'const float' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(175,22): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(179,12): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(180,27): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(185,29): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(190,30): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+﻿  GameManager.cpp
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\GameManager.cpp(72,18): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
   3DCube.vcxproj -> C:\Users\chris\Documents\GitHub\3DCube\x64\Debug\3DCube.exe

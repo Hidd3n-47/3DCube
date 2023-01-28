@@ -12,7 +12,6 @@ SDL_Window* WindowManager::createWindow(const int& width, const int& height, con
 	}
 
 	return pWindow;
-	// QUESTION Does this pointer delete itself? If not, how do we delete it?
 }
 
 SDL_Renderer* WindowManager::createRenderer(SDL_Window* pWindow)
@@ -26,7 +25,6 @@ SDL_Renderer* WindowManager::createRenderer(SDL_Window* pWindow)
 	}
 
 	return pRen;
-	// QUESTION Again, does this delete itself?
 }
 
 void WindowManager::deleteWindow(SDL_Window* pWin)

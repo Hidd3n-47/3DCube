@@ -6,7 +6,7 @@
 class MeshManager
 {
 public:
-	MeshManager(const MeshManager&) = delete; // QUESTION is this way of singleton correct and used in a good place?
+	MeshManager(const MeshManager&) = delete;
 
 	static MeshManager& Instance()
 	{

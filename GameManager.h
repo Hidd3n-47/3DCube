@@ -12,11 +12,10 @@ public:
 
 	void initSystems();
 
-	const int MAIN_WIDTH = 1920;
-	const int MAIN_HEIGHT = 1080;
+	const int MAIN_WIDTH = 1080;
+	const int MAIN_HEIGHT = 720;
 private:
 	WindowManager m_windowManager;
-	//MeshManager m_meshManager; // This is without singleton class.
 
 	SDL_Window* m_pMainWindow = nullptr;
 	SDL_Renderer* m_pMainRenderer = nullptr;

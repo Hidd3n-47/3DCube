@@ -31,10 +31,8 @@ void GameManager::initSystems()
 	m_pMainCamera = new Camera(MAIN_WIDTH, MAIN_HEIGHT);
 
 	// Add the main mesh;
-	Mesh* mesh = new Mesh("bob.obj");
-	MeshManager::Instance().addMesh(mesh); // QUESTION -> is this use of singleton correct/ use use?
-	//m_meshManager.addMesh(mesh); // This is without singleton class.
-	//QUESTION Is this a memory leak as I cannot delete mesh?
+	Mesh* mesh = new Mesh("Mouse.obj");
+	MeshManager::Instance().addMesh(mesh);
 
 	// Start the main loop.
 	mainLoop();
@@ -67,7 +65,6 @@ void GameManager::mainLoop()
 
 		SDL_SetRenderDrawColor(m_pMainRenderer, 255, 255, 255, 255);
 		MeshManager::Instance().renderMeshes(m_pMainRenderer, m_pMainCamera);
-		//m_meshManager.renderMeshes(m_pMainRenderer, m_pMainCamera); // <- this is without singlton class.
 
 		end = SDL_GetPerformanceCounter();
 		deltaTime = (end - start) / (double)SDL_GetPerformanceFrequency() * 1000.0f;
