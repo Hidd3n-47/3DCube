@@ -68,7 +68,7 @@ void GameManager::mainLoop()
 
 		end = SDL_GetPerformanceCounter();
 		deltaTime = (end - start) / (double)SDL_GetPerformanceFrequency() * 1000.0f;
-		SDL_Delay(floor(1000.0f / m_maxFps - deltaTime));
+		//SDL_Delay(floor(1000.0f / m_maxFps - deltaTime));
 		
 		SDL_RenderPresent(m_pMainRenderer);
 	}

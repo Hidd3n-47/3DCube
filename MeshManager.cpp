@@ -69,7 +69,7 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 
 			triangle triTransform = tri;
 			for (int i = 0; i < 3; i++)
-				triTransform.vertex[i].z += 5.0f;
+				triTransform.vertex[i].z += 3.5f;
 
 			// Normal calculation.
 			vec3 normal, posVec1, posVec2;
@@ -142,10 +142,8 @@ void MeshManager::renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera)
 void MeshManager::fillTriangle(const triangle& tri, SDL_Renderer* pRenderer)
 {
 	vec3 v1, v2, v3;
-	short margineErrorLeft = 2.0;
-	short margineErrorRight = margineErrorLeft;
 
-	short highestVert = 1000000;
+	float highestVert = 1000000;
 	short highestVertIndex = 0;
 	for (int i = 0; i < 3; i++)
 	{
@@ -156,7 +154,7 @@ void MeshManager::fillTriangle(const triangle& tri, SDL_Renderer* pRenderer)
 		} 
 	}
 	v1 = tri.vertex[highestVertIndex];
-	if (tri.vertex[Math::mod3(highestVertIndex - 1)].y < tri.vertex[Math::mod3(highestVertIndex + 1)].y)
+	if (tri.vertex[Math::mod3(highestVertIndex - 1)].y > tri.vertex[Math::mod3(highestVertIndex + 1)].y)
 	{
 		v2 = tri.vertex[Math::mod3(highestVertIndex - 1)];
 		v3 = tri.vertex[Math::mod3(highestVertIndex + 1)];
@@ -167,33 +165,86 @@ void MeshManager::fillTriangle(const triangle& tri, SDL_Renderer* pRenderer)
 		v3 = tri.vertex[Math::mod3(highestVertIndex - 1)];
 	}
 
-	float m1 = (v3.y - v1.y) / (v3.x - v1.x);
-	float m2;
-
-	margineErrorLeft *= Math::sign(m1);
-
-	short numVertPixles =  abs(v3.y - v1.y);
-	short y, xleft, xright;
+	short numVertPixles = abs(v1.y - v2.y);
+	short y, xleft, xright, x1, x2;
 	for (int i = 1; i < numVertPixles; i++)
 	{
 		y = v1.y + i;
-		xleft = (y - v1.y) / m1 + v1.x;
 
-		if (y < v2.y)
+		x1 = (y - v2.y) * (v1.x - v2.x) / (v1.y - v2.y) + v2.x;
+
+		if (y <= v3.y)
 		{
-			m2 = (v1.y - v2.y) / (v1.x - v2.x);
-			xright = (y - v2.y) / m2 + v2.x;
+			x2 = (y - v1.y) * (v1.x - v3.x) / (v1.y - v3.y) + v1.x;
 		}
 		else
 		{
-			m2 = (v3.y - v2.y) / (v3.x - v2.x);
-			xright = ((y - v2.y) / m2 + v2.x);
+			x2 = (y - v2.y) * (v2.x - v3.x) / (v2.y - v3.y) + v2.x;
 		}
 
-		margineErrorRight *= Math::sign(m2);
+		xleft = std::min(x1, x2);
+		xright = std::max(x1, x2);
+		xleft -= 1.0f;
+		xright += 1.0f;
 
 		SDL_SetRenderDrawColor(pRenderer, tri.color.r, tri.color.g,tri.color.b, 255);
 		SDL_RenderDrawLineF(pRenderer, xleft, y, xright, y);
 	}
 }
 
+void MeshManager::fillTrianglePerPixle(const triangle& tri, SDL_Renderer* pRenderer)
+{
+	vec3 v1, v2, v3;
+
+	short highestVert = 1000000;
+	short highestVertIndex = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		if (tri.vertex[i].y < highestVert)
+		{
+			highestVert = tri.vertex[i].y;
+			highestVertIndex = i;
+		}
+	}
+	v1 = tri.vertex[highestVertIndex];
+
+	if (tri.vertex[Math::mod3(highestVertIndex - 1)].y > tri.vertex[Math::mod3(highestVertIndex + 1)].y)
+	{
+		v2 = tri.vertex[Math::mod3(highestVertIndex - 1)];
+		v3 = tri.vertex[Math::mod3(highestVertIndex + 1)];
+	}
+	else
+	{
+		v2 = tri.vertex[Math::mod3(highestVertIndex + 1)];
+		v3 = tri.vertex[Math::mod3(highestVertIndex - 1)];
+	}
+
+	short numVertPixles = abs(v1.y - v2.y);
+	short y, xleft, xright, x1, x2;
+	for (int i = 1; i < numVertPixles; i++)
+	{
+		y = v1.y + i;
+
+		x1 = (y - v2.y) * (v1.x - v2.x) / (v1.y - v2.y) + v2.x;
+
+		if (y < v3.y)
+		{
+			x2 = (y - v1.y) * (v1.x - v3.x) / (v1.y - v3.y) + v1.x;
+		}
+		else
+		{
+			x2 = (y - v2.y) * (v2.x - v3.x) / (v2.y - v3.y) + v2.x;
+		}
+
+		xleft = std::min(x1, x2);
+		xright = std::max(x1, x2);
+		xleft -= 5.0f;
+		xright += 5.0f;
+		short numHorzPixles = xright - xleft;
+		
+		SDL_SetRenderDrawColor(pRenderer, tri.color.r - pow(25,tri.vertex[0].z), tri.color.g - pow(25, tri.vertex[0].z), tri.color.b - pow(25, tri.vertex[0].z), 255);
+
+		for (int j = 0; j < numHorzPixles; j++)
+			SDL_RenderDrawPoint(pRenderer, xleft + j, y);
+	}
+}

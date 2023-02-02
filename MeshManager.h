@@ -19,7 +19,7 @@ public:
 
 	void renderMeshes(SDL_Renderer* pRenderer, Camera* pCamera);
 
-	void multiplyMatrixVector(const vec3& i, vec3& o, const mat4x4& m);
+	//void multiplyMatrixVector(const vec3& i, vec3& o, const mat4x4& m);
 private:
 	MeshManager() {}
 
@@ -27,5 +27,6 @@ private:
 	int m_nextFreeId = 0;
 	
 	void fillTriangle(const triangle& tri, SDL_Renderer* pRenderer);
+	void fillTrianglePerPixle(const triangle& tri, SDL_Renderer* pRenderer);
 };
 

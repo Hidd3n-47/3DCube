@@ -1,3 +1,38 @@
-﻿  GameManager.cpp
-C:\Users\chris\Documents\GitHub\3DCube\3DCube\GameManager.cpp(72,18): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
+﻿  MeshManager.cpp
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(68,40): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(97,26): warning C4244: 'initializing': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(110,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(111,38): warning C4244: '*=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(130,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(130,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(129,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(129,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(133,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(133,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(132,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(132,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(136,53): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(136,27): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(135,82): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(135,56): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(168,22): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(172,12): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(174,51): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(178,52): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(182,52): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(187,12): warning C4244: '-=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(188,13): warning C4244: '+=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(199,29): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(199,22): warning C4309: 'initializing': truncation of constant value
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(205,31): warning C4244: '=': conversion from 'const float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(222,22): warning C4244: 'initializing': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(226,12): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(228,51): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(232,52): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(236,52): warning C4244: '=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(241,12): warning C4244: '-=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(242,13): warning C4244: '+=': conversion from 'float' to 'short', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(245,128): warning C4244: 'argument': conversion from 'double' to 'Uint8', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(245,88): warning C4244: 'argument': conversion from 'double' to 'Uint8', possible loss of data
+C:\Users\chris\Documents\GitHub\3DCube\3DCube\MeshManager.cpp(245,49): warning C4244: 'argument': conversion from 'double' to 'Uint8', possible loss of data
   3DCube.vcxproj -> C:\Users\chris\Documents\GitHub\3DCube\x64\Debug\3DCube.exe
